@@ -11,6 +11,11 @@ var isP2SHAddress=bchaddr.isP2SHAddress;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.render('index')
+
+});
+/* GET home page. */
+router.get('/', function(req, res, next) {
   try{
     let address=req.query.address;
     console.log(address)
