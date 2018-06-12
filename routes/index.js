@@ -15,9 +15,9 @@ router.get('/', function(req, res, next) {
 
 });
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/address/:address', function(req, res, next) {
   try{
-    let address=req.query.address;
+    let address=req.params.address;
     console.log(address)
     let result=[];
     if(isLegacyAddress(address)){
